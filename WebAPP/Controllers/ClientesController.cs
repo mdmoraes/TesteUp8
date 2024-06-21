@@ -75,7 +75,7 @@ namespace WebAPP.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Cpf,Nome,DataNascimento,Sexo,Endereco,CidadeId")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("Cpf,Nome,DataNascimento,Sexo,Endereco,Estado, Cidade,CidadeId")] Cliente cliente)
         {
             var cidade = await _context.Cidade
                 .Include(e => e.Estado)
