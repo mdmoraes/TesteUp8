@@ -1,10 +1,10 @@
 -- Cria o banco de dados e o usa.
-CREATE DATABASE CadastroDeClientes;
+CREATE DATABASE BDClientes;
 GO
 
 -- Criar tabelas
 -- Tabela estados
-USE CadastroDeClientes;
+USE BDClientes;
 CREATE TABLE estados
 (estadoId INT IDENTITY (1,1) NOT NULL,
 nome VARCHAR(MAX) NOT NULL,
@@ -13,7 +13,7 @@ CONSTRAINT PK_estadoId PRIMARY KEY CLUSTERED (estadoId));
 GO
 
 -- Tabela cidades
-USE CadastroDeClientes;
+USE BDClientes;
 CREATE TABLE cidades
 (cidadeId INT IDENTITY (1,1) NOT NULL,
 nome VARCHAR(MAX) NOT NULL,
@@ -23,7 +23,7 @@ CONSTRAINT FK_estadoId FOREIGN KEY (estadoId) REFERENCES estados(estadoId));
 GO
 
 -- Tabela clientes
-USE CadastroDeClientes;
+USE BDClientes;
 CREATE TABLE clientes
 (cpf CHAR(11) NOT NULL,
 nome VARCHAR(MAX) NOT NULL,

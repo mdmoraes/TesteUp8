@@ -1,4 +1,4 @@
-USE CadastroDeClientes
+USE BDClientes
 GO
 
 INSERT INTO estados
